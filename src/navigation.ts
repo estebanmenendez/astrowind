@@ -2,17 +2,18 @@ import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
 
 export const headerData = {
   links: [
-    {
-      text: 'Homes',
+  {
+      text: 'Inicio',
       links: [
         {
-          text: 'SaaS',
+          text: 'Quienes Somos',
           href: getPermalink('/homes/saas'),
         },
         {
-          text: 'Startup',
+          text: 'Nuestro Pilares',
           href: getPermalink('/homes/startup'),
         },
+        /*
         {
           text: 'Mobile App',
           href: getPermalink('/homes/mobile-app'),
@@ -20,17 +21,17 @@ export const headerData = {
         {
           text: 'Personal',
           href: getPermalink('/homes/personal'),
-        },
+        },*/
       ],
     },
     {
-      text: 'Pages',
+      text: 'Filantropia',
       links: [
         {
-          text: 'Features (Anchor Link)',
+          text: 'Nuestras obras (Anchor Link)',
           href: getPermalink('/#features'),
         },
-        {
+        /*{
           text: 'Services',
           href: getPermalink('/services'),
         },
@@ -53,16 +54,16 @@ export const headerData = {
         {
           text: 'Privacy policy',
           href: getPermalink('/privacy'),
-        },
+        },*/
       ],
     },
     {
-      text: 'Landing',
+      text: 'Eventos',
       links: [
         {
           text: 'Lead Generation',
           href: getPermalink('/landing/lead-generation'),
-        },
+        },/*
         {
           text: 'Long-form Sales',
           href: getPermalink('/landing/sales'),
@@ -78,7 +79,7 @@ export const headerData = {
         {
           text: 'Coming Soon or Pre-Launch',
           href: getPermalink('/landing/pre-launch'),
-        },
+        },*/
         {
           text: 'Subscription',
           href: getPermalink('/landing/subscription'),
@@ -88,6 +89,10 @@ export const headerData = {
     {
       text: 'Blog',
       links: [
+         {
+          text: 'Contact',
+          href: getPermalink('/contact'),
+        },/*
         {
           text: 'Blog List',
           href: getBlogPermalink(),
@@ -107,7 +112,7 @@ export const headerData = {
         {
           text: 'Tag Page',
           href: getPermalink('astro', 'tag'),
-        },
+        },*/
       ],
     },
     {
