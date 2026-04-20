@@ -2,9 +2,37 @@ import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
 
 export const headerData = {
   links: [
-  {
+    {
       text: 'Inicio',
-      links: [
+      href: '/',
+    },
+    {
+      text: 'Quiénes Somos',
+      href: '/#quienes-somos',
+    },
+    {
+      text: 'Pilares',
+      href: '/#pilares',
+    },
+    {
+      text: 'Galería',
+      href: '/#galeria',
+    },
+    {
+      text: 'Contacto',
+      href: '/#contacto',
+    },
+  ],
+  actions: [{ text: 'Unirse', href: '/#contacto', variant: 'primary' }],
+};
+  
+  /*links: [
+ 
+    {
+      text: 'Inicio',
+      
+    
+   *links: [
         {
           text: 'Quienes Somos',
           href: getPermalink('/homes/saas'),
@@ -13,7 +41,7 @@ export const headerData = {
           text: 'Nuestro Pilares',
           href: getPermalink('/homes/startup'),
         },
-        /*
+        
         {
           text: 'Mobile App',
           href: getPermalink('/homes/mobile-app'),
@@ -21,7 +49,7 @@ export const headerData = {
         {
           text: 'Personal',
           href: getPermalink('/homes/personal'),
-        },*/
+        },
       ],
     },
     {
@@ -31,7 +59,7 @@ export const headerData = {
           text: 'Nuestras obras (Anchor Link)',
           href: getPermalink('/#features'),
         },
-        /*{
+       {
           text: 'Services',
           href: getPermalink('/services'),
         },
@@ -54,7 +82,7 @@ export const headerData = {
         {
           text: 'Privacy policy',
           href: getPermalink('/privacy'),
-        },*/
+        },
       ],
     },
     {
@@ -63,7 +91,7 @@ export const headerData = {
         {
           text: 'Lead Generation',
           href: getPermalink('/landing/lead-generation'),
-        },/*
+        },
         {
           text: 'Long-form Sales',
           href: getPermalink('/landing/sales'),
@@ -79,7 +107,7 @@ export const headerData = {
         {
           text: 'Coming Soon or Pre-Launch',
           href: getPermalink('/landing/pre-launch'),
-        },*/
+        },
         {
           text: 'Subscription',
           href: getPermalink('/landing/subscription'),
@@ -92,7 +120,7 @@ export const headerData = {
          {
           text: 'Contact',
           href: getPermalink('/contact'),
-        },/*
+        },
         {
           text: 'Blog List',
           href: getBlogPermalink(),
@@ -112,7 +140,7 @@ export const headerData = {
         {
           text: 'Tag Page',
           href: getPermalink('astro', 'tag'),
-        },*/
+        },
       ],
     },
     {
@@ -121,9 +149,23 @@ export const headerData = {
     },
   ],
   actions: [{ text: 'Download', href: 'https://github.com/arthelokyo/astrowind', target: '_blank' }],
-};
+};*/
 
 export const footerData = {
+  secondaryLinks: [
+    { text: 'Libertad', href: '#' },
+    { text: 'Fraternidad', href: '#' },
+    { text: 'Igualdad', href: '#' },
+  ],
+  socialLinks: [
+    { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: '#' },
+    { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: '#' },
+  ],
+  footNote: `
+    Widows Sons — Capítulo Rio Uruguay · Todos los derechos reservados.
+  `,
+};
+/*export const footerData = {
   links: [
     {
       title: 'Product',
@@ -185,3 +227,4 @@ export const footerData = {
     Made by <a class="text-blue-600 underline dark:text-muted" href="https://github.com/arthelokyo"> Arthelokyo</a> · All rights reserved.
   `,
 };
+*/
