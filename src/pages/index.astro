@@ -4,8 +4,9 @@ import Features from '~/components/widgets/Features.astro';
 import Content from '~/components/widgets/Content.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
-// Importación de imagen que confirmamos que funciona
+// Importamos ambas imágenes desde tu carpeta de assets
 import img1 from '~/assets/images/img1.png';
+import img2 from '~/assets/images/img2.png';
 
 const metadata = {
   title: 'Widows Sons MRA - Capítulo Rio Uruguay',
@@ -65,8 +66,8 @@ const metadata = {
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=2070&q=80',
-      alt: 'Imagen representativa',
+      src: img2.src,
+      alt: 'Imagen del Capítulo Rio Uruguay',
     }}
   >
     <Fragment slot="content">
