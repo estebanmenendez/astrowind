@@ -6,7 +6,6 @@ import CallToAction from '~/components/widgets/CallToAction.astro';
 
 // Importación de imagen que confirmamos que funciona
 import img1 from '~/assets/images/img1.png';
-import img1 from '~/assets/images/img2.png';
 
 const metadata = {
   title: 'Widows Sons MRA - Capítulo Rio Uruguay',
@@ -66,11 +65,8 @@ const metadata = {
       },
     ]}
     image={{
-        <img 
-        src={img2.src} 
-        alt="Fondo Widows Sons" 
-        class="w-full h-full object-cover opacity-60"
-      />
+      src: 'https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=2070&q=80',
+      alt: 'Imagen representativa',
     }}
   >
     <Fragment slot="content">
