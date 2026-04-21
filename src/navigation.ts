@@ -23,8 +23,11 @@ export const headerData = {
       href: '/#contacto',
     },
   ],
-  actions: [{ text: 'Unirse', href: '/#contacto', variant: 'primary' }],
-};
+  actions: [{ 
+    text: 'Unirse', 
+    href: '#contacto', 
+    variant: 'primary',
+  }],
   
   /*links: [
  
