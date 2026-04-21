@@ -4,11 +4,13 @@ import Features from '~/components/widgets/Features.astro';
 import Content from '~/components/widgets/Content.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
-// Importamos la imagen igual que hiciste en el otro archivo
+// Importación de imagen que confirmamos que funciona
 import img1 from '~/assets/images/img1.png';
+import img1 from '~/assets/images/img2.png';
 
 const metadata = {
   title: 'Widows Sons MRA - Capítulo Rio Uruguay',
+  ignoreTitleTemplate: true,
 };
 ---
 
@@ -25,23 +27,100 @@ const metadata = {
     </div>
 
     <div class="relative z-10 text-center px-4 max-w-5xl mx-auto">
-      <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-6 uppercase" style="text-shadow: 2px 2px 10px rgba(0,0,0,0.8);">
+      <h1 class="text-5xl md:text-7xl font-extrabold tracking-tighter text-white mb-6 uppercase" style="text-shadow: 3px 3px 6px rgba(0,0,0,0.9);">
         WIDOWS SONS <br />
         <span class="text-[#d4af37]">CAPÍTULO RIO URUGUAY</span>
       </h1>
       
-      <p class="text-xl md:text-2xl text-zinc-200 mb-10 max-w-3xl mx-auto" style="text-shadow: 1px 1px 5px rgba(0,0,0,0.8);">
+      <p class="text-xl md:text-2xl text-zinc-200 mb-10 max-w-3xl mx-auto font-medium" style="text-shadow: 1px 1px 3px rgba(0,0,0,0.9);">
         Asociación Internacional de Maestros Masones Motociclistas.<br class="hidden sm:inline" />
         Libertad, Fraternidad y Ayuda Mutua en las rutas del litoral.
       </p>
 
       <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-        <a href="#contacto" class="bg-[#d4af37] hover:bg-white text-black font-bold py-4 px-10 rounded-full transition duration-300 no-underline uppercase tracking-widest">
+        <a href="#contacto" class="bg-[#d4af37] hover:bg-white text-black font-bold py-4 px-10 rounded-full transition duration-300 text-lg uppercase tracking-widest no-underline shadow-lg">
           Unirse a la Ruta
+        </a>
+        <a href="#quienes-somos" class="text-white hover:text-[#d4af37] font-semibold py-4 px-10 transition duration-300 text-lg no-underline">
+          Saber más ↓
         </a>
       </div>
     </div>
   </section>
 
-  ...
+  <Content
+    id="quienes-somos"
+    isReversed
+    tagline="Nuestra Esencia"
+    title="Masonería y Motociclismo"
+    items={[
+      {
+        title: 'Fraternidad en Ruta',
+        description:
+          'No somos un Moto Club, somos una asociación de Hermanos que comparten la pasión por las dos ruedas bajo los principios de la Orden.',
+      },
+      {
+        title: 'Historia del Capítulo',
+        description:
+          'El Capítulo Rio Uruguay nace con el fin de nuclear a los Maestros Masones del litoral, fortaleciendo los lazos fuera de los templos.',
+      },
+    ]}
+    image={{
+        <img 
+        src={img2.src} 
+        alt="Fondo Widows Sons" 
+        class="w-full h-full object-cover opacity-60"
+      />
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Más que una pasión, un estilo de vida</h3>
+      Llevamos nuestros parches con honor, respetando las leyes y fomentando la caridad.
+    </Fragment>
+  </Content>
+
+  <Features
+    id="pilares"
+    tagline="Valores"
+    title="Nuestros Pilares"
+    subtitle="Los principios que guían nuestro camino en cada kilómetro recorrido."
+    items={[
+      {
+        title: 'Libertad',
+        description: 'El viento en la cara y el camino por delante como expresión máxima de nuestro libre albedrío.',
+        icon: 'tabler:wind',
+      },
+      {
+        title: 'Fraternidad',
+        description: 'El auxilio mutuo y la mano extendida al hermano en cualquier circunstancia de la vida o la ruta.',
+        icon: 'tabler:users',
+      },
+      {
+        title: 'Caridad',
+        description: 'El compromiso ineludible con la viuda y el huérfano, llevando ayuda donde sea necesaria.',
+        icon: 'tabler:heart',
+      },
+    ]}
+  />
+
+  <CallToAction
+    id="contacto"
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Enviar Mensaje',
+        href: 'mailto:contacto@tu-dominio.com',
+        icon: 'tabler:mail',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      ¿Tienes alguna duda?
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Si eres un Hermano del litoral y quieres rodar con nosotros, no dudes en contactar al Capítulo Rio Uruguay.
+    </Fragment>
+  </CallToAction>
+
 </Layout>
