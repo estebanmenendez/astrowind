@@ -3,7 +3,6 @@ import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
 import type { CallToAction, Widget } from '~/types';
 import Headline from '~/components/ui/Headline.astro';
 import Button from '~/components/ui/Button.astro';
-import img1 from '~/assets/images/img1.png';
 
 interface Props extends Widget {
   title?: string;
@@ -47,7 +46,6 @@ const {
             actions.map((action) => (
               <div class="flex w-full sm:w-auto">
                 <Button {...(action || {})} class="w-full sm:mb-0" />
-
               </div>
             ))
           ) : (
@@ -56,14 +54,5 @@ const {
         </div>
       )
     }
-<div class="mt-10 flex justify-center">
-  <img
-    src={img1.src}
-    alt="Widows Sons Rio Uruguay"
-    class="w-full max-w-5xl rounded-2xl border border-yellow-500 shadow-2xl"
-class="w-full max-w-5xl rounded-2xl border border-yellow-500 shadow-[0_0_35px_rgba(212,175,55,0.35)] hover:scale-[1.01] transition duration-500"
-
-  />
-</div>
   </div>
 </WidgetWrapper>
