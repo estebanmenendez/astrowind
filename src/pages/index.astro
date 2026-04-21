@@ -3,8 +3,9 @@ import Layout from '~/layouts/PageLayout.astro';
 import Features from '~/components/widgets/Features.astro';
 import Content from '~/components/widgets/Content.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro'; // Nueva importación
 
-// Importamos ambas imágenes desde tu carpeta de assets
+// Importación de imágenes
 import img1 from '~/assets/images/img1.png';
 import img2 from '~/assets/images/img2.png';
 
@@ -18,32 +19,19 @@ const metadata = {
 
   <section class="relative h-screen flex items-center justify-center bg-black overflow-hidden">
     <div class="absolute inset-0 z-0">
-      <img 
-        src={img1.src} 
-        alt="Fondo Widows Sons" 
-        class="w-full h-full object-cover opacity-60"
-      />
+      <img src={img1.src} alt="Fondo" class="w-full h-full object-cover opacity-60" />
       <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-transparent to-black"></div>
     </div>
-
     <div class="relative z-10 text-center px-4 max-w-5xl mx-auto">
-      <h1 class="text-5xl md:text-7xl font-extrabold tracking-tighter text-white mb-6 uppercase" style="text-shadow: 3px 3px 6px rgba(0,0,0,0.9);">
-        WIDOWS SONS <br />
-        <span class="text-[#d4af37]">CAPÍTULO RIO URUGUAY</span>
+      <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-6 uppercase" style="text-shadow: 3px 3px 6px rgba(0,0,0,0.9);">
+        WIDOWS SONS <br /> <span class="text-[#d4af37]">CAPÍTULO RIO URUGUAY</span>
       </h1>
-      
-      <p class="text-xl md:text-2xl text-zinc-200 mb-10 max-w-3xl mx-auto font-medium" style="text-shadow: 1px 1px 3px rgba(0,0,0,0.9);">
-        Asociación Internacional de Maestros Masones Motociclistas.<br class="hidden sm:inline" />
-        Libertad, Fraternidad y Ayuda Mutua en las rutas del litoral.
+      <p class="text-xl md:text-2xl text-zinc-200 mb-10 font-medium">
+        Asociación Internacional de Maestros Masones Motociclistas.
       </p>
-
       <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-        <a href="#contacto" class="bg-[#d4af37] hover:bg-white text-black font-bold py-4 px-10 rounded-full transition duration-300 text-lg uppercase tracking-widest no-underline shadow-lg">
-          Unirse a la Ruta
-        </a>
-        <a href="#quienes-somos" class="text-white hover:text-[#d4af37] font-semibold py-4 px-10 transition duration-300 text-lg no-underline">
-          Saber más ↓
-        </a>
+        <a href="#contacto" class="bg-[#d4af37] text-black font-bold py-4 px-10 rounded-full no-underline uppercase tracking-widest">Unirse a la Ruta</a>
+        <a href="#eventos" class="text-white font-semibold py-4 px-10 no-underline">Próximos Eventos ↓</a>
       </div>
     </div>
   </section>
@@ -53,92 +41,44 @@ const metadata = {
     isReversed
     tagline="Nuestra Esencia"
     title="Masonería y Motociclismo"
-    items={[
-      {
-        title: 'Fraternidad en Ruta',
-        description:
-          'No somos un Moto Club, somos una asociación de Hermanos que comparten la pasión por las dos ruedas bajo los principios de la Orden.',
-      },
-      {
-        title: 'Historia del Capítulo',
-        description:
-          'El Capítulo Rio Uruguay nace con el fin de nuclear a los Maestros Masones del litoral, fortaleciendo los lazos fuera de los templos.',
-      },
-    ]}
-    image={{
-      src: img2, // <--- IMPORTANTE: Quita el ".src", deja solo "img2"
-      alt: 'Imagen del Capítulo Rio Uruguay',
-    }}
+    image={{ src: img2, alt: 'Capítulo Rio Uruguay' }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Más que una pasión, un estilo de vida</h3>
+      <h3 class="text-2xl font-bold dark:text-white mb-2">Más que una pasión, un estilo de vida</h3>
       Llevamos nuestros parches con honor, respetando las leyes y fomentando la caridad.
     </Fragment>
   </Content>
 
   <Features
     id="pilares"
-    tagline="Nuestros Valores"
-    title="Pilares del Capítulo Rio Uruguay"
-    subtitle="Los principios fundamentales que rigen nuestra conducta como Maestros Masones Motociclistas."
+    tagline="Valores"
+    title="Pilares del Capítulo"
     items={[
-      {
-        title: 'Fraternidad y Camadería',
-        description: 
-          'Fomentamos lazos indisolubles entre Hermanos, compartiendo la ruta y la vida bajo el respeto mutuo y la solidaridad masónica.',
-        icon: 'tabler:users',
-      },
-      {
-        title: 'Libertad de Ruta',
-        description: 
-          'Entendemos el motociclismo como una expresión de libertad personal y espiritual, recorriendo los caminos con responsabilidad y honor.',
-        icon: 'tabler:wind',
-      },
-      {
-        title: 'Caridad y Apoyo',
-        description: 
-          'Nuestro compromiso es con la sociedad y especialmente con la viuda y el huérfano, llevando asistencia donde sea requerida.',
-        icon: 'tabler:heart',
-      },
-      {
-        title: 'Asociación Internacional',
-        description: 
-          'Somos parte de una hermandad global presente en diversos países, unidos por el parche y los antiguos límites de la Orden.',
-        icon: 'tabler:world',
-      },
-      {
-        title: 'Maestría y Ejemplo',
-        description: 
-          'Integrado exclusivamente por Maestros Masones, buscamos ser un ejemplo de rectitud tanto en las logias como en las rutas.',
-        icon: 'tabler:certificate',
-      },
-      {
-        title: 'Pasión por las Dos Ruedas',
-        description: 
-          'Promovemos el motociclismo seguro y el disfrute de la ingeniería y el paisaje, fortaleciendo nuestra identidad de grupo.',
-        icon: 'tabler:motorbike',
-      },
+      { title: 'Fraternidad', description: 'Lazos indisolubles entre Hermanos.', icon: 'tabler:users' },
+      { title: 'Libertad', description: 'El motociclismo como expresión de libertad personal.', icon: 'tabler:wind' },
+      { title: 'Caridad', description: 'Asistencia a la viuda y el huérfano.', icon: 'tabler:heart' },
+      { title: 'Internacional', description: 'Parte de una hermandad global.', icon: 'tabler:world' },
+      { title: 'Maestría', description: 'Integrado por Maestros Masones.', icon: 'tabler:certificate' },
+      { title: 'Pasión', description: 'Motociclismo seguro y compañerismo.', icon: 'tabler:motorbike' },
     ]}
   />
 
+  <BlogLatestPosts
+    id="eventos"
+    title="Próximos Eventos y Rodadas"
+    information={`Participa en nuestras actividades, encuentros benéficos y salidas oficiales del Capítulo Rio Uruguay.`}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </BlogLatestPosts>
+
   <CallToAction
     id="contacto"
-    actions={[
-      {
-        variant: 'primary',
-        text: 'Enviar Mensaje',
-        href: 'mailto:contacto@tu-dominio.com',
-        icon: 'tabler:mail',
-      },
-    ]}
+    actions={[{ variant: 'primary', text: 'Enviar Mensaje', href: 'mailto:contacto@ejemplo.com', icon: 'tabler:mail' }]}
   >
-    <Fragment slot="title">
-      ¿Tienes alguna duda?
-    </Fragment>
-
-    <Fragment slot="subtitle">
-      Si eres un Hermano del litoral y quieres rodar con nosotros, no dudes en contactar al Capítulo Rio Uruguay.
-    </Fragment>
+    <Fragment slot="title">¿Tienes alguna duda?</Fragment>
+    <Fragment slot="subtitle">Si eres un Hermano del litoral y quieres rodar con nosotros, contáctanos.</Fragment>
   </CallToAction>
 
 </Layout>
