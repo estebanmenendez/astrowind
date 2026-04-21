@@ -9,21 +9,14 @@ export const headerData = {
 };
 
 export const footerData = {
-  links: [],
   secondaryLinks: [
     { text: 'Libertad', href: '#' },
     { text: 'Fraternidad', href: '#' },
     { text: 'Igualdad', href: '#' },
   ],
-  socialLinks: [
-    { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: '#' },
-    { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: '#' },
-  ],
-  footNote: `Widows Sons MRA - Capítulo Rio Uruguay · All rights reserved.`,
+  socialLinks: [],
+  footNote: `Widows Sons MRA - Capítulo Rio Uruguay`,
 };
-
-
-
 /*import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
 
 export const headerData = {
