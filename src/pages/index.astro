@@ -50,6 +50,39 @@ const metadata = {
   </section>
 
 
+<Hero
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Unirse a la Ruta',
+        href: '#contacto',
+        icon: 'tabler:steering-wheel',
+      },
+      { text: 'Saber más', href: '#quienes-somos' },
+    ]}
+  >
+    <Fragment slot="title">
+      WIDOWS SONS <br />
+      <span class="text-[#d4af37] highlight">CAPÍTULO RIO URUGUAY</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Asociación Internacional de Maestros Masones Motociclistas. <br class="hidden sm:inline" />
+      Libertad, Fraternidad y Ayuda Mutua en las rutas del litoral uruguayo.
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 z-[-1]">
+        <img 
+          src="~/assets/images/img1.png" 
+          alt="Fondo Widows Sons" 
+          class="w-full h-full object-cover opacity-50"
+        />
+        <div class="absolute inset-0 bg-black/40"></div>
+      </div>
+    </Fragment>
+  </Hero>
+
   <Content
     id="quienes-somos"
     isReversed
