@@ -1,4 +1,30 @@
-import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
+export const headerData = {
+  links: [
+    { text: 'Inicio', href: '/' },
+    { text: 'Quiénes Somos', href: '/#quienes-somos' },
+    { text: 'Pilares', href: '/#pilares' },
+    { text: 'Contacto', href: '/#contacto' },
+  ],
+  actions: [{ text: 'Unirse', href: '#contacto', variant: 'primary' }],
+};
+
+export const footerData = {
+  links: [],
+  secondaryLinks: [
+    { text: 'Libertad', href: '#' },
+    { text: 'Fraternidad', href: '#' },
+    { text: 'Igualdad', href: '#' },
+  ],
+  socialLinks: [
+    { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: '#' },
+    { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: '#' },
+  ],
+  footNote: `Widows Sons MRA - Capítulo Rio Uruguay · All rights reserved.`,
+};
+
+
+
+/*import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
 
 export const headerData = {
   links: [
@@ -153,7 +179,7 @@ export const headerData = {
   ],
   actions: [{ text: 'Download', href: 'https://github.com/arthelokyo/astrowind', target: '_blank' }],
 };*/
-
+/*
 export const footerData = {
   secondaryLinks: [
     { text: 'Libertad', href: '#' },
