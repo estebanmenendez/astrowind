@@ -66,10 +66,8 @@ const metadata = {
       },
     ]}
     image={{
-      src: img2.src,
+      src: img2, // <--- IMPORTANTE: Quita el ".src", deja solo "img2"
       alt: 'Imagen del Capítulo Rio Uruguay',
-      // Añadimos esto para que Astro no de error de dimensiones
-      inferSize: true, 
     }}
   >
     <Fragment slot="content">
