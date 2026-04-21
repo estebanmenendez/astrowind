@@ -1,3 +1,31 @@
+// 1. Asegúrate de que exista headerData (el menú de arriba)
+export const headerData = {
+  links: [
+    {
+      text: 'Inicio',
+      href: '/',
+    },
+    {
+      text: 'Quiénes Somos',
+      href: '/#quienes-somos',
+    },
+    {
+      text: 'Pilares',
+      href: '/#pilares',
+    },
+    {
+      text: 'Eventos',
+      href: '/#eventos',
+    },
+    {
+      text: 'Contacto',
+      href: '/#contacto',
+    },
+  ],
+  actions: [{ text: 'Unirse', href: '#contacto', variant: 'primary' }],
+};
+
+// 2. Asegúrate de que tu nuevo footerData también tenga el export
 export const footerData = {
   links: [
     {
@@ -17,18 +45,14 @@ export const footerData = {
     },
   ],
   secondaryLinks: [
-    { text: 'Términos y Condiciones', href: '/terms' },
+    { text: 'Términos', href: '/terms' },
     { text: 'Privacidad', href: '/privacy' },
   ],
   socialLinks: [
     { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: '#' },
     { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: '#' },
-    { ariaLabel: 'YouTube', icon: 'tabler:brand-youtube', href: '#' },
   ],
-  footNote: `
-    <span class="w-5 h-5 md:w-6 md:h-6 md:-mt-0.5 bg-cover mr-1.5 rtl:mr-0 rtl:ml-1.5 float-left rtl:float-right rounded-sm"></span>
-    Diseñado por <a class="text-blue-600 underline dark:text-muted" href="#"> Esteban Menendez</a> · Widows Sons Rio Uruguay © 2026
-  `,
+  footNote: `Diseñado por <a class="text-blue-600 underline dark:text-muted" href="#"> Esteban Menendez</a> · Widows Sons Rio Uruguay © 2026`,
 };
 /*import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
 
