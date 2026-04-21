@@ -51,6 +51,43 @@
   .bg-primary, .bg-blue-600, .hover\:bg-blue-700:hover {
     background-color: var(--aw-color-primary) !important;
   }
+/* FUERZA BRUTA CONTRA EL AZUL */
+  
+  /* 1. Reset total de enlaces en el menú y sitio */
+  a, button {
+    outline: none !important;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* 2. Sobreescribir estados: activo, visitado y focus */
+  a:active, 
+  a:visited, 
+  a:focus,
+  .aw-link-active {
+    color: var(--aw-color-primary) !important;
+    text-decoration: none !important;
+  }
+
+  /* 3. Específico para el menú de navegación */
+  header a:hover, 
+  header a:focus, 
+  header a:active {
+    color: var(--aw-color-primary) !important;
+  }
+
+  /* 4. Si el botón de inicio tiene una clase específica de 'current' */
+  [aria-current="page"] {
+    color: var(--aw-color-primary) !important;
+  }
+
+  /* 5. Matar cualquier rastro de la paleta azul de Tailwind que use el template */
+  .text-blue-600, 
+  .text-blue-700, 
+  .dark\:text-blue-400,
+  .hover\:text-blue-600:hover {
+    color: var(--aw-color-primary) !important;
+  }
+
 }
 
 @layer utilities {
