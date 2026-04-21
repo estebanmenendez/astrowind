@@ -5,6 +5,7 @@ import Content from '~/components/widgets/Content.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro'; // Nueva importación
 import Contact from '~/components/widgets/Contact.astro';
+import Features2 from '~/components/widgets/Features2.astro';
 
 // Importación de imágenes
 import img1 from '~/assets/images/img1.png';
@@ -117,27 +118,46 @@ const metadata = {
 
 <Contact
     id="contacto"
-    title="Contacto"
-    subtitle="Si eres un Hermano del litoral y quieres rodar con nosotros, o simplemente quieres saber más, envíanos un mensaje."
-    tagline="Escríbenos"
+    title="¡Escríbenos!"
+    subtitle="Estamos a tu disposición para cualquier consulta sobre el Capítulo o nuestras actividades."
+    tagline="Contacto"
     inputs={[
       {
         type: 'text',
         name: 'name',
-        label: 'Nombre',
+        label: 'Nombre completo',
       },
       {
         type: 'email',
         name: 'email',
-        label: 'Email',
+        label: 'Correo electrónico',
       },
     ]}
     textarea={{
-      label: 'Mensaje',
+      label: 'Tu mensaje',
       name: 'message',
     }}
-    button="Enviar Mensaje"
-    description="Normalmente respondemos en menos de 24 horas."
+    button="Enviar mensaje"
+    description="Tu mensaje será enviado directamente a la secretaría del Capítulo."
+    
+    // Aquí agregamos los detalles de los "alrededores" que viste en la imagen
+    items={[
+      {
+        title: 'Ubicación',
+        description: 'Paysandú, Uruguay',
+        icon: 'tabler:map-pin',
+      },
+      {
+        title: 'Teléfono',
+        description: '+598 000 000 (Opcional)',
+        icon: 'tabler:headset',
+      },
+      {
+        title: 'Email',
+        description: 'contacto@tu-dominio.com',
+        icon: 'tabler:mail',
+      },
+    ]}
   />
 
 <section class="py-16 bg-black border-t border-[#d4af37]/20">
