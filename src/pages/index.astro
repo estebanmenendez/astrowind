@@ -72,12 +72,11 @@ const metadata = {
     </Fragment>
 
     <Fragment slot="bg">
-      <div class="absolute inset-0 z-[-1]">
-        <img 
-          src="~/assets/images/img1.png" 
-          alt="Fondo Widows Sons" 
-          class="w-full h-full object-cover opacity-50"
-        />
+      <div class="absolute inset-0 z-[-1] overflow-hidden">
+        <div 
+          class="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-50"
+          style="background-image: url('/src/assets/images/img1.png');"
+        ></div>
         <div class="absolute inset-0 bg-black/40"></div>
       </div>
     </Fragment>
