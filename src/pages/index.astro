@@ -11,31 +11,32 @@ const metadata = {
 
 <Layout metadata={metadata}>
 
-  <section class="relative h-screen flex items-center justify-center bg-black overflow-hidden">
+ <section class="relative h-screen flex items-center justify-center bg-black overflow-hidden">
     <div class="absolute inset-0 z-0">
       <img 
         src="/src/assets/images/img1.png" 
-        alt="Fondo" 
-        class="w-full h-full object-cover opacity-50"
+        alt="Fondo Widows Sons" 
+        class="w-full h-full object-cover opacity-60"
       />
-      <div class="absolute inset-0 bg-black/40"></div>
+      <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-transparent to-black"></div>
     </div>
 
     <div class="relative z-10 text-center px-4 max-w-5xl mx-auto">
-      <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-6 uppercase">
+      <h1 class="text-5xl md:text-7xl font-extrabold tracking-tighter text-white mb-6 uppercase" style="text-shadow: 3px 3px 6px rgba(0,0,0,0.9);">
         WIDOWS SONS <br />
         <span class="text-[#d4af37]">CAPÍTULO RIO URUGUAY</span>
       </h1>
       
-      <p class="text-xl text-zinc-200 mb-10 max-w-2xl mx-auto">
-        Asociación Internacional de Maestros Masones Motociclistas.
+      <p class="text-xl md:text-2xl text-zinc-200 mb-10 max-w-3xl mx-auto font-medium" style="text-shadow: 1px 1px 3px rgba(0,0,0,0.9);">
+        Asociación Internacional de Maestros Masones Motociclistas.<br class="hidden sm:inline" />
+        Libertad, Fraternidad y Ayuda Mutua en las rutas del litoral.
       </p>
 
-      <div class="flex flex-col sm:flex-row justify-center gap-4">
-        <a href="#contacto" class="bg-[#d4af37] text-black font-bold py-3 px-8 rounded-full no-underline hover:bg-white transition">
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="#contacto" class="bg-[#d4af37] hover:bg-white text-black font-bold py-4 px-10 rounded-full transition duration-300 text-lg uppercase tracking-widest no-underline">
           Unirse a la Ruta
         </a>
-        <a href="#quienes-somos" class="text-white font-semibold py-3 px-8 no-underline hover:text-[#d4af37] transition">
+        <a href="#quienes-somos" class="text-white hover:text-[#d4af37] font-semibold py-4 px-10 transition duration-300 text-lg no-underline hover:scale-105 transform">
           Saber más ↓
         </a>
       </div>
@@ -59,11 +60,28 @@ const metadata = {
 
   <Features
     id="pilares"
+    tagline="Valores"
     title="Nuestros Pilares"
+    subtitle="Los principios que guían nuestro camino en cada kilómetro recorrido."
     items={[
-      { title: 'Libertad', description: 'El viento y el camino.', icon: 'tabler:wind' },
-      { title: 'Fraternidad', description: 'Auxilio mutuo.', icon: 'tabler:users' },
-      { title: 'Caridad', description: 'Compromiso social.', icon: 'tabler:heart' }
+      {
+        title: 'Libertad',
+        description:
+          'El viento en la cara y el camino por delante como expresión máxima de nuestro libre albedrío.',
+        icon: 'tabler:wind',
+      },
+      {
+        title: 'Fraternidad',
+        description:
+          'El auxilio mutuo y la mano extendida al hermano en cualquier circunstancia de la vida o la ruta.',
+        icon: 'tabler:users',
+      },
+      {
+        title: 'Caridad',
+        description:
+          'El compromiso ineludible con la viuda y el huérfano, llevando ayuda donde sea necesaria.',
+        icon: 'tabler:heart',
+      },
     ]}
   />
 
