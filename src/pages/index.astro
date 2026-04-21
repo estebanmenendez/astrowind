@@ -1,7 +1,5 @@
-
 ---
 import Layout from '~/layouts/PageLayout.astro';
-
 import Hero from '~/components/widgets/Hero.astro';
 import Features from '~/components/widgets/Features.astro';
 import Steps from '~/components/widgets/Steps.astro';
@@ -16,41 +14,7 @@ const metadata = {
 
 <Layout metadata={metadata}>
 
-
-<section class="relative h-screen flex items-center justify-center bg-black overflow-hidden">
-    <div class="absolute inset-0 z-0">
-      <img 
-        src="~/assets/images/img1.png" 
-        alt="Widows Sons Rio Uruguay Fondo" 
-        class="w-full h-full object-cover opacity-60"
-      />
-      <div class="absolute inset-0 bg-black opacity-40"></div> </div>
-
-    <div class="relative z-10 text-center px-4 max-w-5xl mx-auto">
-      <h1 class="text-5xl md:text-6xl font-extrabold tracking-tighter text-white mb-6 uppercase" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">
-        WIDOWS SONS <br />
-        <span class="text-[#d4af37]">CAPÍTULO RIO URUGUAY</span>
-      </h1>
-      
-      <p class="text-xl text-zinc-200 mb-10 max-w-3xl mx-auto" style="text-shadow: 1px 1px 2px rgba(0,0,0,0.8);">
-        Asociación Internacional de Maestros Masones Motociclistas.<br class="hidden sm:inline" />
-        Libertad, Fraternidad y Ayuda Mutua en las rutas del litoral uruguayo.
-      </p>
-
-      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-        <a href="#contacto" class="btn btn-primary w-full sm:w-auto px-8 py-3 text-lg flex items-center gap-2">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" /><path d="M12 12m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M12 14l0 7" /><path d="M10 12l-6.75 -1" /><path d="M14 12l6.75 -1" /></svg>
-          Unirse a la Ruta
-        </a>
-        <a href="#quienes-somos" class="btn btn-secondary w-full sm:w-auto px-8 py-3 text-lg bg-zinc-900/50 hover:bg-zinc-800">
-          Saber más
-        </a>
-      </div>
-    </div>
-  </section>
-
-
-<Hero
+  <Hero
     actions={[
       {
         variant: 'primary',
@@ -100,8 +64,8 @@ const metadata = {
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=2070&q=80',
-      alt: 'Imagen representativa',
+      src: '~/assets/images/img2.png',
+      alt: 'Esencia Widows Sons Rio Uruguay',
     }}
   >
     <Fragment slot="content">
@@ -114,7 +78,7 @@ const metadata = {
     </Fragment>
   </Content>
 
- <Features
+  <Features
     id="pilares"
     tagline="Valores"
     title="Nuestros Pilares"
@@ -124,19 +88,19 @@ const metadata = {
         title: 'Libertad',
         description:
           'El viento en la cara y el camino por delante como expresión máxima de nuestro libre albedrío.',
-        icon: 'tabler:wind', // <--- Cambiado de Wind a wind
+        icon: 'tabler:wind',
       },
       {
         title: 'Fraternidad',
         description:
           'El auxilio mutuo y la mano extendida al hermano en cualquier circunstancia de la vida o la ruta.',
-        icon: 'tabler:users', // <--- Asegúrate que esté en minúsculas
+        icon: 'tabler:users',
       },
       {
         title: 'Caridad',
         description:
           'El compromiso ineludible con la viuda y el huérfano, llevando ayuda donde sea necesaria.',
-        icon: 'tabler:heart', // <--- Asegúrate que esté en minúsculas
+        icon: 'tabler:heart',
       },
     ]}
   />
@@ -153,43 +117,4 @@ const metadata = {
       {
         title: 'Paso 2: <span class="font-medium">Poseer Motocicleta</span>',
         description:
-          "Compartir la pasión por el motociclismo y poseer una moto de cilindrada adecuada para rutas nacionales.",
-        icon: 'tabler:motorbike',
-      },
-      {
-        title: 'Paso 3: <span class="font-medium">Contacto</span>',
-        description:
-          'Escríbenos para conocernos en una de nuestras salidas abiertas o eventos sociales.',
-        icon: 'tabler:message',
-      },
-      {
-        title: '¡Listos para rodar!',
-        icon: 'tabler:check',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1616198814651-e71f960c3180?auto=format&fit=crop&w=987&q=80',
-      alt: 'Imagen pasos',
-    }}
-  />
-
-  <CallToAction
-    id="contacto"
-    actions={[
-      {
-        variant: 'primary',
-        text: 'Enviar Mensaje',
-        href: 'mailto:contacto@tu-dominio.com',
-        icon: 'tabler:mail',
-      },
-    ]}
-  >
-    <Fragment slot="title">
-      ¿Tienes alguna duda?
-    </Fragment>
-
-    <Fragment slot="subtitle">
-      Si eres un Hermano del litoral y quieres rodar con nosotros, no dudes en contactar al Capítulo Rio Uruguay.
-    </Fragment>
-  </CallToAction>
-</Layout>
+          "Compartir
