@@ -39,13 +39,54 @@ const metadata = {
   <Content
     id="quienes-somos"
     isReversed
-    tagline="Nuestra Esencia"
-    title="Masonería y Motociclismo"
-    image={{ src: img2, alt: 'Capítulo Rio Uruguay' }}
+    tagline="Nuestra Historia"
+    title="El rugido nació del martillo y el cincel"
+    items={[
+      {
+        title: 'I. Hermandad',
+        description: 'Somos hermanos antes que nada. El lazo fraterno precede a todo título y distinción.',
+        icon: 'tabler:users-group',
+      },
+      {
+        title: 'II. Rectitud',
+        description: 'Actuamos con la escuadra como guía. Nuestra conducta debe ser recta en la Logia y en la ruta.',
+        icon: 'tabler:square-rotated',
+      },
+      {
+        title: 'III. Servicio',
+        description: 'La causa de la viuda y el huérfano es nuestra razón. Cabalgamos para sostener al prójimo.',
+        icon: 'tabler:heart-handshake',
+      },
+      {
+        title: 'IV. Tradición',
+        description: 'Honramos la Masonería Universal y respetamos sus antiguas usanzas en cada acción.',
+        icon: 'tabler:old',
+      },
+    ]}
+    image={{
+      src: img2,
+      alt: 'Hermanos del Chapter Rio Uruguay',
+    }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold dark:text-white mb-2">Más que una pasión, un estilo de vida</h3>
-      Llevamos nuestros parches con honor, respetando las leyes y fomentando la caridad.
+      <div class="text-muted dark:text-slate-400">
+        <p class="mb-4">
+          Los <strong>Widows Sons</strong> son una asociación internacional de Hermanos Masones Maestros activos que se reúnen bajo la bandera del motociclismo desde finales de los años 90. Nuestro nombre —Hijos de la Viuda— es una referencia bíblica y masónica que alude a Hiram Abiff, el Maestro Constructor del Templo de Salomón.
+        </p>
+        <p class="mb-4">
+          El <strong>Chapter Rio Uruguay</strong> fue fundado por un grupo de hermanos de ambas orillas del río, unidos por la pasión común del asfalto y la convicción masónica. Nuestro territorio simbólico son las rutas que bordean el Río Uruguay, un corredor de fraternidad entre naciones hermanas.
+        </p>
+        <p>
+          Desde nuestra fundación, cada milla recorrida ha sido también un gesto de amor al prójimo: recaudaciones para escuelas rurales, hospitales y familias en necesidad jalonan nuestro camino.
+        </p>
+      </div>
+      
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mt-8 mb-2">
+        Nuestro Credo
+      </h3>
+      <p class="text-lg text-[#d4af37] font-semibold italic">
+        Cuatro piedras angulares que ningún viento de ruta puede derribar.
+      </p>
     </Fragment>
   </Content>
 
