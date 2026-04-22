@@ -31,28 +31,39 @@ export const footerData = {
     {
       title: 'Capítulo',
       links: [
-        { text: 'Historia', href: '#quienes-somos' },
-        { text: 'Nuestro Credo', href: '#quienes-somos' },
-        { text: 'Pilares', href: '#pilares' },
+        { text: 'Historia', href: '#' },
+        { text: 'Nuestros Pilares', href: '/pilares' },
+        { text: 'Autoridades', href: '#' },
       ],
     },
     {
       title: 'Comunidad',
       links: [
-        { text: 'Eventos', href: '#eventos' },
-        { text: 'Membresía', href: '#contacto' },
+        { text: 'Próximos Eventos', href: '/blog' },
+        { text: 'Acción Social', href: '#' },
+        { text: 'Membresía', href: '#' },
+      ],
+    },
+    {
+      title: 'Contacto',
+      links: [
+        { text: 'Escríbenos', href: '/contacto' },
+        { text: 'Ubicación', href: '#' },
       ],
     },
   ],
   secondaryLinks: [
-    { text: 'Términos', href: '/terms' },
-    { text: 'Privacidad', href: '/privacy' },
+    { text: 'Términos y Condiciones', href: '#' },
+    { text: 'Privacidad', href: '#' },
   ],
   socialLinks: [
-    { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: '#' },
-    { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: '#' },
+    { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: 'https://instagram.com/tu_cuenta' },
+    { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: 'https://facebook.com/tu_cuenta' },
   ],
-  footNote: `Diseñado por <a class="text-blue-600 underline dark:text-muted" href="#"> Esteban Menendez</a> · Widows Sons Rio Uruguay © 2026`,
+  footNote: `
+    <span class="w-5 h-5 md:w-6 md:h-6 md:-mt-0.5 bg-cover mr-1.5 rtl:mr-0 rtl:ml-1.5 float-left rtl:float-right rounded-sm"></span>
+    Diseñado por <a class="text-blue-600 hover:underline dark:text-gray-200" href="https://github.com/estebanmenendez"> Esteban Menéndez</a> · Widows Sons Rio Uruguay © 2026
+  `,
 };
 /*import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
 
