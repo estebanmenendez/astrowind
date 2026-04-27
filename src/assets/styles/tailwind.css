@@ -2,156 +2,115 @@
 @tailwind components;
 @tailwind utilities;
 
-/* CONFIGURACIÓN DE COLORES WIDOWS SONS */
+/* CONFIGURACIÓN DE COLORES WIDOWS SONS - CORRECCIÓN DEFINITIVA */
 @layer base {
   :root {
     --aw-font-sans: 'InterVariable', 'Inter', ui-sans-serif, system-ui;
     
-    /* Dorado Institucional Widows Sons */
-    --aw-color-primary: #d4af37;
-    --aw-color-secondary: #b8952e;
-    --aw-color-accent: #d4af37; /* Forzamos acento dorado */
+    /* 1. Definición en RGB para que funcionen las transparencias de Tailwind */
+    /* Dorado #d4af37 -> rgb(212, 175, 55) */
+    --aw-color-primary: 212 175 55;
+    --aw-color-secondary: 184 149 46;
+    --aw-color-accent: 212 175 55;
 
     /* Fondo Negro Puro */
-    --aw-color-bg-page: #000000;
-    --aw-color-bg-page-dark: #000000;
+    --aw-color-bg-page: 0 0 0;
+    --aw-color-bg-page-dark: 0 0 0;
 
-    /* Texto Blanco y Gris */
-    --aw-color-text-page: #ffffff;
-    --aw-color-text-muted: #a1a1aa;
-    --aw-color-text-heading: #ffffff;
-    
-    --aw-color-border: #d4af3733; /* Borde dorado muy tenue (20% opacidad) */
+    /* Texto */
+    --aw-color-text-page: 255 255 255;
+    --aw-color-text-muted: 161 161 170;
+    --aw-color-text-heading: 255 255 255;
   }
 
   .dark {
-    --aw-color-primary: #d4af37;
-    --aw-color-bg-page: #000000;
-    --aw-color-text-page: #ffffff;
-    --aw-color-text-muted: #a1a1aa;
-    --aw-color-accent: #d4af37;
+    --aw-color-primary: 212 175 55;
+    --aw-color-bg-page: 0 0 0;
+    --aw-color-accent: 212 175 55;
   }
 
-  /* ELIMINAR AZULES RESIDUALES */
+  /* RESET TOTAL DE ENLACES Y COLORES AZULES */
   ::selection {
-    background-color: #d4af37; /* Color al resaltar texto con el mouse */
+    background-color: rgb(var(--aw-color-primary));
     color: #000000;
   }
 
-  /* Forzamos que cualquier enlace que el template crea que debe ser azul, sea dorado */
+  /* Forzar que todos los enlaces usen la variable primaria (Dorado) */
   a {
     @apply transition-colors duration-200;
-  }
-  
-  /* Esto sobreescribe las clases de Tailwind de colores azules del template original */
-  .text-primary, .text-blue-600, .hover\:text-blue-800:hover {
-    color: var(--aw-color-primary) !important;
-  }
-  
-  .bg-primary, .bg-blue-600, .hover\:bg-blue-700:hover {
-    background-color: var(--aw-color-primary) !important;
-  }
-/* FUERZA BRUTA CONTRA EL AZUL */
-  
-  /* 1. Reset total de enlaces en el menú y sitio */
-  a, button {
-    outline: none !important;
-    -webkit-tap-highlight-color: transparent;
+    color: inherit;
   }
 
-  /* 2. Sobreescribir estados: activo, visitado y focus */
-  a:active, 
-  a:visited, 
-  a:focus,
-  .aw-link-active {
-    color: var(--aw-color-primary) !important;
-    text-decoration: none !important;
-  }
-
-  /* 3. Específico para el menú de navegación */
-  header a:hover, 
-  header a:focus, 
-  header a:active {
-    color: var(--aw-color-primary) !important;
-  }
-
-  /* 4. Si el botón de inicio tiene una clase específica de 'current' */
-  [aria-current="page"] {
-    color: var(--aw-color-primary) !important;
-  }
-
-  /* 5. Matar cualquier rastro de la paleta azul de Tailwind que use el template */
+  /* MATAR EL AZUL EN TODO EL SITIO */
+  .text-primary, 
   .text-blue-600, 
-  .text-blue-700, 
   .dark\:text-blue-400,
-  .hover\:text-blue-600:hover {
-    color: var(--aw-color-primary) !important;
+  .hover\:text-blue-800:hover,
+  .hover\:text-blue-600:hover,
+  .aw-link-active {
+    color: rgb(var(--aw-color-primary)) !important;
   }
 
+  .bg-primary, 
+  .bg-blue-600, 
+  .bg-blue-700,
+  .hover\:bg-blue-700:hover {
+    background-color: rgb(var(--aw-color-primary)) !important;
+  }
+
+  /* CORRECCIÓN ESPECÍFICA DEL MENÚ DE NAVEGACIÓN */
+  header a:hover, 
+  header a.aw-link-active,
+  header a[aria-current="page"] {
+    color: rgb(var(--aw-color-primary)) !important;
+    background-color: transparent !important; /* Evita fondos azules en el hover */
+  }
+
+  /* Evitar bordes azules en botones y focus */
+  *:focus {
+    outline-color: rgb(var(--aw-color-primary)) !important;
+  }
 }
 
 @layer utilities {
-  .bg-page { background-color: var(--aw-color-bg-page); }
-  .bg-dark { background-color: var(--aw-color-bg-page-dark); }
-  .bg-light { background-color: var(--aw-color-bg-page); }
-  .text-page { color: var(--aw-color-text-page); }
-  .text-muted { color: var(--aw-color-text-muted); }
+  .bg-page { background-color: rgb(var(--aw-color-bg-page)); }
+  .text-page { color: rgb(var(--aw-color-text-page)); }
+  .text-muted { color: rgb(var(--aw-color-text-muted)); }
 }
 
 @layer components {
-  /* Botones con estilo dorado */
+  /* Botones con estilo Widows Sons */
   .btn {
-    @apply inline-flex items-center justify-center rounded-md border-gray-700 border bg-transparent font-medium text-center text-base text-page leading-snug transition py-2.5 px-6 ease-in duration-200 focus:ring-2 focus:ring-offset-2 focus:ring-yellow-600 hover:bg-zinc-900 hover:border-yellow-600 cursor-pointer;
+    @apply inline-flex items-center justify-center rounded-md border-gray-700 border bg-transparent font-medium text-center text-base text-white leading-snug transition py-2.5 px-6 ease-in duration-200;
   }
 
   .btn-primary {
-    @apply btn font-semibold bg-[#d4af37] text-black border-[#d4af37] hover:bg-white hover:border-white hover:text-black;
+    @apply btn font-semibold bg-[#d4af37] text-black border-[#d4af37] hover:bg-white hover:border-white hover:text-black !important;
   }
 
-  .btn-secondary { @apply btn; }
-
-  .btn-tertiary {
-    @apply btn border-none shadow-none text-muted hover:text-white;
+  .btn-secondary {
+    @apply btn border-[#d4af37] text-[#d4af37] hover:bg-[#d4af37] hover:text-black;
   }
 }
 
-/* AJUSTE DEL HEADER (MENU) PARA QUE NO SEA BLANCO */
+/* HEADER OSCURO */
 #header.scroll > div:first-child {
-  @apply bg-black/90 backdrop-blur-md border-b border-yellow-600/30;
-  box-shadow: 0 4px 20px 0 rgb(0 0 0 / 50%);
+  background-color: rgba(0, 0, 0, 0.9) !important;
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.3);
 }
 
-/* Estilos de navegación y animaciones originales */
 #header.expanded nav {
-  position: fixed;
-  top: 70px;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  padding: 0 5px;
   @apply bg-black;
 }
 
-.dropdown:focus .dropdown-menu,
-.dropdown:focus-within .dropdown-menu,
-.dropdown:hover .dropdown-menu {
-  display: block;
+/* SOMBRAS PARA LEGIBILIDAD */
+.hero-title, h1, h2 {
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
 }
 
-[data-aw-toggle-menu].expanded g > path:first-child {
-  @apply -rotate-45 translate-y-[15px] translate-x-[-3px];
-}
-
-[data-aw-toggle-menu].expanded g > path:last-child {
-  @apply rotate-45 translate-y-[-8px] translate-x-[14px];
-}
-/* Esto añade una sombra sutil a los textos del Hero para que se lean perfecto sobre cualquier foto */
-.hero-title, h1 {
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
-  text-transform: uppercase;
-}
-
-  img {
+/* FIX IMÁGENES */
+img {
   object-fit: contain !important;
   background-color: black !important;
 }
