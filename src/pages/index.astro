@@ -32,8 +32,8 @@ const metadata = {
         Asociación Internacional de Maestros Masones Motociclistas.
       </p>
       <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-        <a href="#contacto" class="bg-[#d4af37] text-black font-bold py-4 px-10 rounded-full no-underline uppercase tracking-widest">Unirse a la Ruta</a>
-        <a href="#eventos" class="text-white font-semibold py-4 px-10 no-underline">Próximos Eventos ↓</a>
+        <a href="#contacto" class="bg-[#d4af37] text-black font-bold py-4 px-10 rounded-full no-underline uppercase tracking-widest hover:bg-white transition-colors">Unirse a la Ruta</a>
+        <a href="#eventos" class="text-white font-semibold py-4 px-10 no-underline hover:text-[#d4af37]">Próximos Eventos ↓</a>
       </div>
     </div>
   </section>
@@ -112,7 +112,7 @@ const metadata = {
     information={`Participa en nuestras actividades, encuentros benéficos y salidas oficiales del Capítulo Rio Uruguay.`}
   >
     <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+      <div class="absolute inset-0 bg-black"></div>
     </Fragment>
   </BlogLatestPosts>
 
@@ -121,6 +121,8 @@ const metadata = {
     title="¡Escríbenos!"
     subtitle="Estamos a tu disposición para cualquier consulta sobre el Capítulo o nuestras actividades."
     tagline="Contacto"
+    method="POST"
+    action="https://formspree.io/f/TU_ID_DE_FORMSPREE" 
     inputs={[
       {
         type: 'text',
@@ -138,7 +140,7 @@ const metadata = {
       name: 'message',
     }}
     button="Enviar mensaje"
-    description="Tu mensaje será enviado directamente a la secretaría del Capítulo."
+    description="Al enviar, confirmas que los datos son correctos para que podamos contactarte."
     items={[
       {
         title: 'Ubicación',
@@ -146,13 +148,8 @@ const metadata = {
         icon: 'tabler:map-pin',
       },
       {
-        title: 'Teléfono',
-        description: '+598 000 000 (Opcional)',
-        icon: 'tabler:headset',
-      },
-      {
-        title: 'Email',
-        description: 'contacto@tu-dominio.com',
+        title: 'Email Directo',
+        description: 'esteban.menendez@gmail.com',
         icon: 'tabler:mail',
       },
     ]}
