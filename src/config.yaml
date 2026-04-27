@@ -6,12 +6,12 @@ site:
 
   googleSiteVerificationId: orcPxI47GSa-cRvY11tUe6iGg2IO_RPvnA1q95iEM3M
 
-# Metadatos SEO (Lo que se ve al compartir)
+# Metadatos SEO
 metadata:
   title:
     default: Widows Sons — Capítulo Rio Uruguay
     template: '%s — Widows Sons'
-  description: 'Sitio oficial de los Widows Sons MRA, Capítulo Rio Uruguay. Fraternidad, motociclismo y caridad en el litoral uruguayo.'
+  description: 'Sitio oficial de los Widows Sons, Capítulo Rio Uruguay. Fraternidad, motociclismo y caridad en el litoral uruguayo.'
   robots:
     index: true
     follow: true
@@ -68,6 +68,7 @@ analytics:
     googleAnalytics:
       id: null
 
+# Configuración de Interfaz: Forzado de Modo Oscuro
 ui:
-  theme: 'dark'
+  theme: dark
   showThemeSwitcher: false
