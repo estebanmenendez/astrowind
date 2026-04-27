@@ -2,7 +2,6 @@
 import Features2 from '~/components/widgets/Features2.astro';
 import Features3 from '~/components/widgets/Features3.astro';
 import Hero from '~/components/widgets/Hero.astro';
-import Stats from '~/components/widgets/Stats.astro';
 import Steps2 from '~/components/widgets/Steps2.astro';
 import Layout from '~/layouts/PageLayout.astro';
 
@@ -10,7 +9,6 @@ const metadata = {
   title: 'Quiénes Somos — Widows Sons Río Uruguay',
 };
 ---
-
 
 <Layout metadata={metadata}>
   <Hero
@@ -22,7 +20,7 @@ const metadata = {
   >
     <Fragment slot="title">
       Widows Sons <br />
-      <span class="text-accent dark:text-white">Capítulo Río Uruguay</span>
+      <span class="text-[#d4af37] dark:text-[#d4af37]">Capítulo Río Uruguay</span>
     </Fragment>
 
     <Fragment slot="subtitle">
@@ -33,15 +31,19 @@ const metadata = {
     </Fragment>
   </Hero>
 
-  <Stats
+  <Features3
     title="Nuestra Misión"
     subtitle="La fraternidad no se declama, se demuestra."
-    stats={[
-      { title: 'Propósito', amount: 'Filantropía' },
-      { title: 'Base', amount: 'Educación' },
-      { title: 'Impacto', amount: 'Social' },
-      { title: 'Motor', amount: 'Fraternidad' },
+    columns={4}
+    items={[
+      { title: 'Filantropía', description: 'Nuestro Propósito', icon: 'tabler:heart-handshake' },
+      { title: 'Educación', description: 'Nuestra Base', icon: 'tabler:book' },
+      { title: 'Social', description: 'Nuestro Impacto', icon: 'tabler:users' },
+      { title: 'Fraternidad', description: 'Nuestro Motor', icon: 'tabler:engine' },
     ]}
+    classes={{
+      icon: 'text-[#d4af37]',
+    }}
   />
 
   <Features3
@@ -52,23 +54,23 @@ const metadata = {
     items={[
       {
         title: 'Paysandú',
-        description:
-          'Base de nuestras operaciones y gestión del Capítulo, coordinando acciones locales.',
+        description: 'Base de nuestras operaciones y gestión del Capítulo, coordinando acciones locales.',
         icon: 'tabler:map-pin',
       },
       {
         title: 'Salto',
-        description:
-          'Extensión de nuestra presencia fraternal y compromiso con la comunidad salteña.',
+        description: 'Extensión de nuestra presencia fraternal y compromiso con la comunidad salteña.',
         icon: 'tabler:map-pin',
       },
       {
         title: 'Río Negro',
-        description:
-          'Punto clave de unión regional para nuestras rutas y paradas solidarias.',
+        description: 'Punto clave de unión regional para nuestras rutas y paradas solidarias.',
         icon: 'tabler:map-pin',
       },
     ]}
+    classes={{
+      icon: 'text-[#d4af37]',
+    }}
   />
 
   <Steps2
@@ -77,25 +79,22 @@ const metadata = {
     items={[
       {
         title: 'Fraternidad y Servicio',
-        description:
-          'Unión genuina entre hermanos y vocación constante de ayuda desinteresada a quienes más lo necesitan.',
+        description: 'Unión genuina entre hermanos y vocación constante de ayuda desinteresada.',
       },
       {
         title: 'Respeto y Compromiso',
-        description:
-          'Respeto por las personas e instituciones, junto a una acción social sostenida y responsable en el tiempo.',
+        description: 'Respeto por las personas e instituciones, con acción social sostenida.',
       },
       {
         title: 'Honor',
-        description:
-          'Mantenemos una coherencia absoluta entre lo que somos, lo que decimos y lo que hacemos en cada lugar donde estamos presentes.',
+        description: 'Coherencia absoluta entre lo que somos, decimos y hacemos.',
       },
     ]}
   />
 
   <Steps2
     title="Nuestro Compromiso"
-    subtitle="No somos solo un grupo de motociclistas. Somos una hermandad que actúa, que construye y que deja huella."
+    subtitle="No somos solo un grupo de motociclistas. Somos una hermandad que actúa, construye y deja huella."
     isReversed={true}
     callToAction={{
       text: 'Ver nuestras actividades',
@@ -104,20 +103,23 @@ const metadata = {
     items={[
       {
         title: 'Acción Concreta',
-        description: 'Transformamos los principios en hechos visibles y sostenidos.',
+        description: 'Transformamos los principios en hechos visibles.',
         icon: 'tabler:tool',
       },
       {
         title: 'Vínculo Humano',
-        description: 'Generamos impacto real uniendo las dos orillas del Río Uruguay.',
+        description: 'Generamos impacto uniendo las dos orillas del Río Uruguay.',
         icon: 'tabler:users-group',
       },
       {
         title: 'Referente Regional',
-        description: 'Trabajamos para ser un ejemplo de civismo y fraternidad en la vía pública.',
+        description: 'Ejemplo de civismo y fraternidad en la vía pública.',
         icon: 'tabler:certificate',
       },
     ]}
+    classes={{
+      icon: 'text-[#d4af37]',
+    }}
   />
 
   <Features2
@@ -131,7 +133,7 @@ const metadata = {
       },
       {
         title: 'Sedes Masónicas',
-        description: 'Puntos de encuentro institucional de nuestros miembros.',
+        description: 'Puntos de encuentro institucional.',
       },
       {
         title: 'Rutas Solidarias',
@@ -147,14 +149,17 @@ const metadata = {
     items={[
       {
         title: 'Mensaje Directo',
-        description: 'Para coordinar apoyo en campañas o identificar familias que requieran asistencia.',
+        description: 'Coordinación de apoyo y campañas solidarias.',
         icon: 'tabler:messages',
       },
       {
         title: 'Membresía',
-        description: 'Información exclusiva para Maestros Masones interesados en el Capítulo.',
+        description: 'Información para Maestros Masones interesados.',
         icon: 'tabler:id-badge-2',
       },
     ]}
+    classes={{
+      icon: 'text-[#d4af37]',
+    }}
   />
 </Layout>
