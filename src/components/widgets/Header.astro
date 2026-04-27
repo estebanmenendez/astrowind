@@ -49,13 +49,13 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
 
 <header
   class:list={[
-    { sticky: isSticky, relative: !isSticky, dark: true }, // Forzamos dark: true aquí
+    { sticky: isSticky, relative: !isSticky, dark: true },
     'top-0 z-40 flex-none mx-auto w-full border-b border-gray-50/0 transition-[opacity] ease-in-out bg-black dark:bg-black',
   ]}
   {...isSticky ? { 'data-aw-sticky-header': true } : {}}
   {...id ? { id } : {}}
 >
-  <div class="absolute inset-0 bg-black dark:bg-black"></div> { /* Forzamos fondo negro sólido */ }
+  <div class="absolute inset-0 bg-black dark:bg-black"></div>
   <div
     class:list={[
       'relative text-default py-3 px-3 md:px-6 mx-auto w-full',
