@@ -50,6 +50,6 @@ export const footerData = {
     { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: 'https://facebook.com/tu_cuenta' },
   ],
   footNote: `
-    Diseñado por <a class="text-blue-600 hover:underline dark:text-gray-200" href="https://github.com/estebanmenendez"> STEB </a> · Widows Sons Rio Uruguay © 2026
+    Diseñado por STEB </a> · Widows Sons Rio Uruguay © 2026
   `,
 };
