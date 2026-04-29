@@ -8,18 +8,19 @@ export const headerData = {
     },
     {
       text: 'Quiénes Somos',
-      href: getPermalink('/about'), // AHORA SÍ: Apunta a tu nueva página institucional
+      href: getPermalink('/about'),
     },
     {
       text: 'Eventos',
-      href: getBlogPermalink(), // Te lleva al listado de eventos que estuvimos arreglando
+      href: getBlogPermalink(),
     },
     {
       text: 'Contacto',
-      href: '/#contacto', // Este sí puede ser un ancla al formulario de abajo
+      href: '/#contacto',
     },
   ],
   actions: [{ text: 'Unirse', href: '/#contacto', variant: 'primary' }],
+  showToggleTheme: false, // Desactiva el botón de cambio de luz/oscuridad
 };
 
 export const footerData = {
@@ -35,7 +36,7 @@ export const footerData = {
     {
       title: 'Comunidad',
       links: [
-        { text: 'Instagram', href: 'https://instagram.com/tu_cuenta' },
+        { text: 'Instagram', href: 'https://instagram.com/wsriouruguay' },
         { text: 'Facebook', href: 'https://facebook.com/tu_cuenta' },
       ],
     },
@@ -50,6 +51,6 @@ export const footerData = {
     { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: 'https://facebook.com/tu_cuenta' },
   ],
   footNote: `
-    Diseñado por STEB </a> · Widows Sons Rio Uruguay © 2026
+    Diseñado por STEB · Widows Sons Rio Uruguay © 2026
   `,
 };
