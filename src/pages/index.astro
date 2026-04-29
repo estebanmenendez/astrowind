@@ -97,4 +97,78 @@ const metadata = {
       { title: 'Caridad', description: 'Asistencia a la viuda y el huérfano.', icon: 'tabler:heart' },
       { title: 'Internacional', description: 'Parte de una hermandad global.', icon: 'tabler:world' },
       { title: 'Maestría', description: 'Integrado por Maestros Masones.', icon: 'tabler:certificate' },
-      { title: 'Pasión', description: '
+      { title: 'Pasión', description: 'Motociclismo seguro y compañerismo.', icon: 'tabler:motorbike' },
+    ]}
+  />
+
+  <BlogLatestPosts
+    id="eventos"
+    title="Próximos Eventos y Rodadas"
+    information="Participa en nuestras actividades, encuentros benéficos y salidas oficiales del Capítulo Rio Uruguay."
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-black"></div>
+    </Fragment>
+  </BlogLatestPosts>
+
+  <section id="contacto" class="relative py-16 bg-black border-t border-[#d4af37]/10">
+    <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
+      <div>
+        <h2 class="text-3xl md:text-4xl font-bold text-white uppercase tracking-widest mb-4">¡Escríbenos!</h2>
+        <p class="text-zinc-400 text-lg mb-8">
+          Si tienes consultas sobre el Capítulo o nuestras actividades benéficas, completa el siguiente formulario y nos pondremos en contacto contigo a la brevedad.
+        </p>
+        
+        <div class="space-y-6">
+          <div class="flex items-start">
+            <Icon name="tabler:map-pin" class="w-6 h-6 text-[#d4af37] mr-4" />
+            <div>
+              <h4 class="text-white font-bold">Presencia en el Litoral</h4>
+              <p class="text-zinc-400">Rio Negro, Paysandú y Salto — Uruguay</p>
+            </div>
+          </div>
+          <div class="flex items-start">
+            <Icon name="tabler:message-circle" class="w-6 h-6 text-[#d4af37] mr-4" />
+            <div>
+              <h4 class="text-white font-bold">Atención Directa</h4>
+              <p class="text-zinc-400">Canal oficial de comunicación vía web.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-zinc-900/50 p-8 rounded-lg border border-[#d4af37]/20">
+        <form action="https://formspree.io/f/xpqkgznj" method="POST" class="space-y-4">
+          <div>
+            <label for="name" class="block text-sm font-medium text-zinc-300 mb-1">Nombre completo</label>
+            <input type="text" name="name" id="name" required class="w-full bg-black border border-zinc-700 text-white rounded px-4 py-3 focus:border-[#d4af37] outline-none transition-colors" />
+          </div>
+          <div>
+            <label for="email" class="block text-sm font-medium text-zinc-300 mb-1">Correo electrónico</label>
+            <input type="email" name="email" id="email" required class="w-full bg-black border border-zinc-700 text-white rounded px-4 py-3 focus:border-[#d4af37] outline-none transition-colors" />
+          </div>
+          <div>
+            <label for="message" class="block text-sm font-medium text-zinc-300 mb-1">Tu mensaje</label>
+            <textarea id="message" name="message" rows="4" required class="w-full bg-black border border-zinc-700 text-white rounded px-4 py-3 focus:border-[#d4af37] outline-none transition-colors"></textarea>
+          </div>
+          <button type="submit" class="w-full bg-[#d4af37] text-black font-bold py-3 rounded uppercase tracking-widest hover:bg-white transition-all">
+            Enviar mensaje
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 bg-black border-t border-[#d4af37]/20">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-6 uppercase tracking-widest">
+        Widows Sons <span class="text-[#d4af37]">Rio Uruguay</span>
+      </h2>
+      <p class="text-xl text-zinc-400 max-w-2xl mx-auto italic font-light">
+        "No rodamos para escapar de la vida, sino para que la vida no se nos escape."
+      </p>
+      <div class="mt-8 w-24 h-px bg-[#d4af37] mx-auto opacity-50"></div>
+    </div>
+  </section>
+
+</Layout>
