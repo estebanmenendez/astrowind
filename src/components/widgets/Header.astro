@@ -44,7 +44,6 @@ const {
   position = 'center',
 } = Astro.props;
 
-// NORMALIZACIÓN: Obtenemos la ruta actual para el marcado del menú
 const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
 ---
 
@@ -173,17 +172,25 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
 </header>
 
 <style is:global>
-  /* 1. ARREGLO DE SELECCIÓN DE TEXTO: Evita que el texto se vuelva negro al marcarlo */
+  /* 1. SELECCIÓN DE TEXTO */
   ::selection {
-    background-color: #d4af37; /* Fondo dorado al seleccionar */
-    color: #000000; /* Texto negro sobre el fondo dorado */
+    background-color: #d4af37; 
+    color: #000000; 
   }
 
-  /* 2. MARCADO DORADO PARA EL MENÚ ACTIVO */
+  /* 2. MENÚ ACTIVO DORADO */
   .menu-active, 
   [data-aw-active-link],
   .aw-link-active {
     color: #d4af37 !important;
     font-weight: 700 !important;
+  }
+
+  /* 3. ARREGLO DE NÚMEROS EN CIRCUNFERENCIAS (NUESTROS VALORES) */
+  /* Forzamos que el texto dentro de los círculos sea negro para que se vea sobre el blanco */
+  .rounded-full span, 
+  .rounded-full div,
+  [class*="rounded-full"] {
+    color: #000000 !important;
   }
 </style>
