@@ -44,7 +44,7 @@ const {
   position = 'center',
 } = Astro.props;
 
-// NORMALIZACIÓN: Limpiamos la ruta actual del navegador
+// NORMALIZACIÓN ROBUSTA: Obtenemos la ruta actual sin barras finales
 const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
 ---
 
@@ -84,9 +84,9 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
       >
         {
           links.map(({ text, href, links: subLinks }) => {
-            // Normalizamos el enlace del menú para comparar correctamente
             const normalizedHref = href ? `/${trimSlash(href)}` : '';
-            const isActive = normalizedHref === currentPath;
+            // Verificamos si la ruta actual coincide con el enlace o empieza por él (para subpáginas)
+            const isActive = normalizedHref === currentPath || (normalizedHref !== '/' && currentPath.startsWith(normalizedHref));
 
             return (
               <li class={subLinks?.length ? 'dropdown' : ''}>
@@ -107,7 +107,7 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
                             <a
                               class:list={[
                                 'first:rounded-t last:rounded-b md:hover:bg-gray-100 hover:text-link dark:hover:text-white dark:hover:bg-gray-700 py-2 px-5 block whitespace-no-wrap',
-                                { 'aw-link-active': normalizedHref2 === currentPath },
+                                { 'menu-active': normalizedHref2 === currentPath },
                               ]}
                               href={href2}
                             >
@@ -121,8 +121,8 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
                 ) : (
                   <a
                     class:list={[
-                      'hover:text-link dark:hover:text-white px-4 py-3 flex items-center whitespace-nowrap',
-                      { 'aw-link-active': isActive },
+                      'hover:text-link dark:hover:text-white px-4 py-3 flex items-center whitespace-nowrap transition-colors duration-200',
+                      { 'menu-active': isActive },
                     ]}
                     href={href}
                   >
@@ -143,7 +143,7 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
     >
       <div class="items-center flex justify-between w-full md:w-auto">
         <div class="flex">
-          {/* SE HA ELIMINADO EL BOTÓN DE CAMBIO DE TEMA PARA QUE NO APAREZCA NUNCA */}
+          {/* BOTÓN ELIMINADO */}
           {/* {showToggleTheme && <ToggleTheme iconClass="w-6 h-6 md:w-5 md:h-5 md:inline-block" />} */}
           {
             showRssFeed && (
@@ -174,9 +174,11 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
 </header>
 
 <style is:global>
-  /* ESTILO PARA TODAS LAS SECCIONES ACTIVAS DEL MENÚ */
+  /* FUERZA BRUTA PARA EL COLOR DORADO EN EL MENÚ ACTIVO */
+  .menu-active, 
+  [data-aw-active-link],
   .aw-link-active {
-    color: #d4af37 !important; /* Dorado institucional */
-    font-weight: 600;
+    color: #d4af37 !important;
+    font-weight: 700 !important;
   }
 </style>
