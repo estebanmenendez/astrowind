@@ -19,7 +19,7 @@ export const headerData = {
       href: '/#contacto',
     },
   ],
-  actions: [{ text: 'Unirse', href: '/#contacto', variant: 'primary' }],
+  actions: [{ text: 'Contacto', href: '/#contacto', variant: 'primary' }],
   showToggleTheme: false, // Desactiva el botón de cambio de luz/oscuridad
 };
 
