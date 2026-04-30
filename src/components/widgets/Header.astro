@@ -44,7 +44,7 @@ const {
   position = 'center',
 } = Astro.props;
 
-// NORMALIZACIÓN ROBUSTA: Obtenemos la ruta actual sin barras finales
+// NORMALIZACIÓN: Obtenemos la ruta actual para el marcado del menú
 const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
 ---
 
@@ -85,7 +85,6 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
         {
           links.map(({ text, href, links: subLinks }) => {
             const normalizedHref = href ? `/${trimSlash(href)}` : '';
-            // Verificamos si la ruta actual coincide con el enlace o empieza por él (para subpáginas)
             const isActive = normalizedHref === currentPath || (normalizedHref !== '/' && currentPath.startsWith(normalizedHref));
 
             return (
@@ -174,7 +173,13 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
 </header>
 
 <style is:global>
-  /* FUERZA BRUTA PARA EL COLOR DORADO EN EL MENÚ ACTIVO */
+  /* 1. ARREGLO DE SELECCIÓN DE TEXTO: Evita que el texto se vuelva negro al marcarlo */
+  ::selection {
+    background-color: #d4af37; /* Fondo dorado al seleccionar */
+    color: #000000; /* Texto negro sobre el fondo dorado */
+  }
+
+  /* 2. MARCADO DORADO PARA EL MENÚ ACTIVO */
   .menu-active, 
   [data-aw-active-link],
   .aw-link-active {
