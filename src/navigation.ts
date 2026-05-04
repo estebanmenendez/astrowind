@@ -2,25 +2,14 @@ import { getPermalink, getBlogPermalink } from './utils/permalinks';
 
 export const headerData = {
   links: [
-    {
-      text: 'Inicio',
-      href: '/',
-    },
-    {
-      text: 'Quiénes Somos',
-      href: getPermalink('/about'),
-    },
-    {
-      text: 'Eventos',
-      href: getBlogPermalink(),
-    },
-    {
-      text: 'Contacto',
-      href: '/#contacto',
-    },
+    { text: 'Inicio', href: '/' },
+    { text: 'Quiénes Somos', href: getPermalink('/about') },
+    { text: 'Eventos', href: getBlogPermalink() },
+    { text: 'Colabora', href: getPermalink('/colabora') }, // <-- Nueva sección
+    { text: 'Contacto', href: '/#contacto' },
   ],
   actions: [{ text: 'Contacto', href: '/#contacto', variant: 'primary' }],
-  showToggleTheme: false, // Desactiva el botón de cambio de luz/oscuridad
+  showToggleTheme: false,
 };
 
 export const footerData = {
