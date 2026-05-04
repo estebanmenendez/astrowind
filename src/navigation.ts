@@ -5,7 +5,7 @@ export const headerData = {
     { text: 'Inicio', href: '/' },
     { text: 'Quiénes Somos', href: getPermalink('/about') },
     { text: 'Eventos', href: getBlogPermalink() },
-    { text: 'Colabora', href: getPermalink('/colabora') }, // <-- Nueva sección
+    { text: 'Colabora', href: getPermalink('/colabora') }, //  <-- Nueva sección
     { text: 'Contacto', href: '/#contacto' },
   ],
   actions: [{ text: 'Contacto', href: '/#contacto', variant: 'primary' }],
