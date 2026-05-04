@@ -1,8 +1,13 @@
 ---
 import { Icon } from 'astro-icon/components';
+import { Image } from 'astro:assets';
 import Layout from '~/layouts/PageLayout.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
+
+import imgRemera from '~/assets/images/remera-ws.png';
+import imgParche from '~/assets/images/parche-litoral.png';
+import imgRitohouse from '~/assets/images/pieza-yeso.png';
 
 const metadata = {
   title: 'Colabora — Widows Sons Río Uruguay',
@@ -56,10 +61,10 @@ const metadata = {
     </div>
 
     <div class="grid gap-6 row-gap-5 md:grid-cols-3">
-      <!-- Producto 1 -->
+      <!-- Producto 1: Remera -->
       <div class="flex flex-col p-4 border border-[#d4af37]/20 rounded-lg bg-zinc-900/50 hover:border-[#d4af37] transition-all">
-        <div class="aspect-square bg-zinc-800 rounded mb-4 flex items-center justify-center text-zinc-500">
-          <Icon name="tabler:shirt" class="w-20 h-20 text-[#d4af37]/40" />
+        <div class="aspect-square bg-zinc-800 rounded mb-4 overflow-hidden flex items-center justify-center">
+          <Image src={imgRemera} alt="Remera Oficial WS Río Uruguay" class="object-cover w-full h-full" />
         </div>
         <h3 class="font-bold text-white uppercase tracking-wider">Remera Oficial WS Río Uruguay</h3>
         <p class="text-sm text-zinc-400 mt-2 mb-4">Algodón premium con logo bordado en espalda y frente.</p>
@@ -69,10 +74,10 @@ const metadata = {
         </div>
       </div>
 
-      <!-- Producto 2 -->
+      <!-- Producto 2: Parche -->
       <div class="flex flex-col p-4 border border-[#d4af37]/20 rounded-lg bg-zinc-900/50 hover:border-[#d4af37] transition-all">
-        <div class="aspect-square bg-zinc-800 rounded mb-4 flex items-center justify-center text-zinc-500">
-          <Icon name="tabler:id-badge-2" class="w-20 h-20 text-[#d4af37]/40" />
+        <div class="aspect-square bg-zinc-800 rounded mb-4 overflow-hidden flex items-center justify-center">
+          <Image src={imgParche} alt="Parche Litoral Oeste" class="object-cover w-full h-full" />
         </div>
         <h3 class="font-bold text-white uppercase tracking-wider">Parche "Litoral Oeste"</h3>
         <p class="text-sm text-zinc-400 mt-2 mb-4">Parche bordado de alta resistencia para chalecos o camperas.</p>
@@ -84,11 +89,11 @@ const metadata = {
 
       <!-- Producto 3: Línea Ritohouse -->
       <div class="flex flex-col p-4 border border-[#d4af37]/20 rounded-lg bg-zinc-900/50 hover:border-[#d4af37] transition-all">
-        <div class="aspect-square bg-zinc-800 rounded mb-4 flex items-center justify-center text-zinc-500">
-          <Icon name="tabler:poker-chip" class="w-20 h-20 text-[#d4af37]/40" />
+        <div class="aspect-square bg-zinc-800 rounded mb-4 overflow-hidden flex items-center justify-center">
+          <Image src={imgRitohouse} alt="Escuadra y Compás WS Edición Yeso" class="object-cover w-full h-full" />
         </div>
         <h3 class="font-bold text-white uppercase tracking-wider">Escuadra y Compás WS (Edición Yeso)</h3>
-        <p class="text-sm text-zinc-400 mt-2 mb-4">Pieza decorativa artesanal Widows Sons Capitulo Rio Uruguay.</p>
+        <p class="text-sm text-zinc-400 mt-2 mb-4">Pieza decorativa artesanal Widows Sons Capítulo Río Uruguay.</p>
         <div class="mt-auto flex justify-between items-center">
           <span class="text-[#d4af37] font-bold">$550</span>
           <a href="/#contacto" class="text-xs bg-[#d4af37] text-black px-3 py-1 rounded font-bold uppercase hover:bg-white transition-colors">Consultar</a>
