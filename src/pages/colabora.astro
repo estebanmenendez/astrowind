@@ -1,0 +1,80 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Colabora — Widows Sons Río Uruguay',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Introducción -->
+  <Features2
+    title="Formas de Apoyar nuestra Causa"
+    subtitle="Tu contribución se transforma en acciones concretas en el litoral uruguayo. Elige cómo quieres sumarte a nuestra marcha filantrópica."
+    items={[
+      {
+        title: 'Tienda de Merchandising',
+        description: 'Adquiere productos oficiales. El 100% de las ganancias se destina al fondo de ayuda social.',
+        icon: 'tabler:shopping-bag',
+        callToAction: {
+          text: 'Ver Catálogo',
+          href: '#tienda',
+          variant: 'link',
+        },
+      },
+      {
+        title: 'Sponsors y Empresas',
+        description: 'Programa para socios comerciales que deseen vincular su marca con nuestros valores de servicio.',
+        icon: 'tabler:building-store',
+        callToAction: {
+          text: 'Saber más',
+          href: '#sponsors',
+          variant: 'link',
+        },
+      },
+      {
+        title: 'Donación Civil',
+        description: 'Aportes directos o materiales en desuso para nuestras intervenciones en la comunidad.',
+        icon: 'tabler:heart-handshake',
+        callToAction: {
+          text: '¿Cómo donar?',
+          href: '#donaciones',
+          variant: 'link',
+        },
+      },
+    ]}
+  />
+
+  <!-- Detalle de Donación Civil (Sector solicitado) -->
+  <section id="donaciones" class="px-4 py-16 mx-auto max-w-7xl lg:py-20 bg-zinc-900/30 rounded-lg">
+    <div class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
+      <h2 class="text-[#d4af37] font-bold tracking-tight text-3xl sm:text-4xl uppercase mb-4">Donación Civil</h2>
+      <p class="text-zinc-400">No todo es dinero; tu tiempo y lo que ya no usas pueden cambiar una realidad.</p>
+    </div>
+
+    <div class="grid gap-8 row-gap-5 md:grid-cols-2">
+      <div class="p-5 border border-[#d4af37]/20 rounded shadow-sm bg-black">
+        <h3 class="mb-2 font-bold text-white uppercase">Donaciones Materiales</h3>
+        <p class="text-sm text-zinc-300">
+          Recibimos ropa en buen estado, calzado, herramientas o artículos de primera necesidad que tengas en desuso. 
+          Nosotros nos encargamos de que lleguen a las manos correctas en nuestras rodadas solidarias.
+        </p>
+      </div>
+      <div class="p-5 border border-[#d4af37]/20 rounded shadow-sm bg-black">
+        <h3 class="mb-2 font-bold text-white uppercase">Aportes Económicos</h3>
+        <p class="text-sm text-zinc-300">
+          Personas físicas pueden realizar transferencias directas destinadas a la compra de insumos médicos, alimentos o materiales de construcción para familias vulnerables.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Final -->
+  <CallToAction
+    actions={[{ variant: 'primary', text: 'Contactar para Donar', href: '/#contacto' }]}
+    title="¿Tienes algo para entregar?"
+    subtitle="Contáctanos y coordinamos la logística para retirar tu donación o facilitarte los medios de transferencia."
+  />
+</Layout>
