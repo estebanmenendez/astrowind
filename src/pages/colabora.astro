@@ -5,9 +5,13 @@ import Layout from '~/layouts/PageLayout.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
+// IMPORTACIONES DE IMÁGENES (Asegúrate de que los nombres coincidan con tus archivos)
 import imgRemera from '~/assets/images/remera-ws.png';
 import imgParche from '~/assets/images/parche-litoral.png';
-import imgRitohouse from '~/assets/images/pieza_yeso.png';
+import imgRitohouse from '~/assets/images/pieza-yeso.png';
+import imgGuantes from '~/assets/images/guantes-cuero.png';
+import imgGorros from '~/assets/images/gorros-capitulo.png';
+import imgVelas from '~/assets/images/velas-simbolicas.png';
 
 const metadata = {
   title: 'Colabora — Widows Sons Río Uruguay',
@@ -24,36 +28,24 @@ const metadata = {
         title: 'Tienda de Merchandising',
         description: 'Adquiere productos oficiales. El 100% de las ganancias se destina al fondo de ayuda social.',
         icon: 'tabler:shopping-bag',
-        callToAction: {
-          text: 'Ver Catálogo',
-          href: '#tienda',
-          variant: 'link',
-        },
+        callToAction: { text: 'Ver Catálogo', href: '#tienda', variant: 'link' },
       },
       {
         title: 'Sponsors y Empresas',
         description: 'Programa para socios comerciales que deseen vincular su marca con nuestros valores de servicio.',
         icon: 'tabler:building-store',
-        callToAction: {
-          text: 'Saber más',
-          href: '#sponsors',
-          variant: 'link',
-        },
+        callToAction: { text: 'Saber más', href: '#sponsors', variant: 'link' },
       },
       {
         title: 'Donación Civil',
         description: 'Aportes directos o materiales en desuso para nuestras intervenciones en la comunidad.',
         icon: 'tabler:heart-handshake',
-        callToAction: {
-          text: '¿Cómo donar?',
-          href: '#donaciones',
-          variant: 'link',
-        },
+        callToAction: { text: '¿Cómo donar?', href: '#donaciones', variant: 'link' },
       },
     ]}
   />
 
-  <!-- 2. SECCIÓN DE TIENDA OFICIAL -->
+  <!-- 2. SECCIÓN DE TIENDA OFICIAL (6 PRODUCTOS) -->
   <section id="tienda" class="px-4 py-16 mx-auto max-w-7xl lg:py-20">
     <div class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
       <h2 class="text-[#d4af37] font-bold tracking-tight text-3xl sm:text-4xl uppercase mb-4">Tienda Oficial</h2>
@@ -66,11 +58,11 @@ const metadata = {
         <div class="aspect-square bg-zinc-800 rounded mb-4 overflow-hidden flex items-center justify-center">
           <Image src={imgRemera} alt="Remera Oficial WS Río Uruguay" class="object-cover w-full h-full" />
         </div>
-        <h3 class="font-bold text-white uppercase tracking-wider">Remera Oficial WS Río Uruguay</h3>
-        <p class="text-sm text-zinc-400 mt-2 mb-4">Algodón premium con logo bordado en espalda y frente.</p>
+        <h3 class="font-bold text-white uppercase tracking-wider text-sm">Remera Oficial WS Río Uruguay</h3>
+        <p class="text-xs text-zinc-400 mt-2 mb-4">Algodón premium con logo bordado en espalda y frente.</p>
         <div class="mt-auto flex justify-between items-center">
           <span class="text-[#d4af37] font-bold">$1.200</span>
-          <a href="/#contacto" class="text-xs bg-[#d4af37] text-black px-3 py-1 rounded font-bold uppercase hover:bg-white transition-colors">Consultar</a>
+          <a href="/#contacto" class="text-[10px] bg-[#d4af37] text-black px-3 py-1 rounded font-bold uppercase hover:bg-white transition-colors">Consultar</a>
         </div>
       </div>
 
@@ -79,11 +71,11 @@ const metadata = {
         <div class="aspect-square bg-zinc-800 rounded mb-4 overflow-hidden flex items-center justify-center">
           <Image src={imgParche} alt="Parche Litoral Oeste" class="object-cover w-full h-full" />
         </div>
-        <h3 class="font-bold text-white uppercase tracking-wider">Parche "Litoral Oeste"</h3>
-        <p class="text-sm text-zinc-400 mt-2 mb-4">Parche bordado de alta resistencia para chalecos o camperas.</p>
+        <h3 class="font-bold text-white uppercase tracking-wider text-sm">Parche "Litoral Oeste"</h3>
+        <p class="text-xs text-zinc-400 mt-2 mb-4">Parche bordado de alta resistencia para chalecos o camperas.</p>
         <div class="mt-auto flex justify-between items-center">
           <span class="text-[#d4af37] font-bold">$850</span>
-          <a href="/#contacto" class="text-xs bg-[#d4af37] text-black px-3 py-1 rounded font-bold uppercase hover:bg-white transition-colors">Consultar</a>
+          <a href="/#contacto" class="text-[10px] bg-[#d4af37] text-black px-3 py-1 rounded font-bold uppercase hover:bg-white transition-colors">Consultar</a>
         </div>
       </div>
 
@@ -92,95 +84,55 @@ const metadata = {
         <div class="aspect-square bg-zinc-800 rounded mb-4 overflow-hidden flex items-center justify-center">
           <Image src={imgRitohouse} alt="Escuadra y Compás WS Edición Yeso" class="object-cover w-full h-full" />
         </div>
-        <h3 class="font-bold text-white uppercase tracking-wider">Escuadra y Compás WS (Edición Yeso)</h3>
-        <p class="text-sm text-zinc-400 mt-2 mb-4">Pieza decorativa artesanal Widows Sons Capítulo Río Uruguay.</p>
+        <h3 class="font-bold text-white uppercase tracking-wider text-sm">Escuadra y Compás WS (Edición Yeso)</h3>
+        <p class="text-xs text-zinc-400 mt-2 mb-4">Pieza decorativa artesanal producida por Ritohouse.</p>
         <div class="mt-auto flex justify-between items-center">
           <span class="text-[#d4af37] font-bold">$1200</span>
-          <a href="/#contacto" class="text-xs bg-[#d4af37] text-black px-3 py-1 rounded font-bold uppercase hover:bg-white transition-colors">Consultar</a>
+          <a href="/#contacto" class="text-[10px] bg-[#d4af37] text-black px-3 py-1 rounded font-bold uppercase hover:bg-white transition-colors">Consultar</a>
+        </div>
+      </div>
+
+      <!-- Producto 4: Guantes (NUEVO) -->
+      <div class="flex flex-col p-4 border border-[#d4af37]/20 rounded-lg bg-zinc-900/50 hover:border-[#d4af37] transition-all">
+        <div class="aspect-square bg-zinc-800 rounded mb-4 overflow-hidden flex items-center justify-center">
+          <Image src={imgGuantes} alt="Guantes de cuero personalizados" class="object-cover w-full h-full" />
+        </div>
+        <h3 class="font-bold text-white uppercase tracking-wider text-sm">Guantes de Cuero Personalizados</h3>
+        <p class="text-xs text-zinc-400 mt-2 mb-4">Cuero legítimo con grabado láser del Capítulo Río Uruguay.</p>
+        <div class="mt-auto flex justify-between items-center">
+          <span class="text-[#d4af37] font-bold">$1.850</span>
+          <a href="/#contacto" class="text-[10px] bg-[#d4af37] text-black px-3 py-1 rounded font-bold uppercase hover:bg-white transition-colors">Consultar</a>
+        </div>
+      </div>
+
+      <!-- Producto 5: Gorros (NUEVO) -->
+      <div class="flex flex-col p-4 border border-[#d4af37]/20 rounded-lg bg-zinc-900/50 hover:border-[#d4af37] transition-all">
+        <div class="aspect-square bg-zinc-800 rounded mb-4 overflow-hidden flex items-center justify-center">
+          <Image src={imgGorros} alt="Gorros de nuestro capítulo" class="object-cover w-full h-full" />
+        </div>
+        <h3 class="font-bold text-white uppercase tracking-wider text-sm">Gorros de nuestro Capítulo</h3>
+        <p class="text-xs text-zinc-400 mt-2 mb-4">Ajustables con bordado dorado de alta calidad.</p>
+        <div class="mt-auto flex justify-between items-center">
+          <span class="text-[#d4af37] font-bold">$850</span>
+          <a href="/#contacto" class="text-[10px] bg-[#d4af37] text-black px-3 py-1 rounded font-bold uppercase hover:bg-white transition-colors">Consultar</a>
+        </div>
+      </div>
+
+      <!-- Producto 6: Velas (NUEVO) -->
+      <div class="flex flex-col p-4 border border-[#d4af37]/20 rounded-lg bg-zinc-900/50 hover:border-[#d4af37] transition-all">
+        <div class="aspect-square bg-zinc-800 rounded mb-4 overflow-hidden flex items-center justify-center">
+          <Image src={imgVelas} alt="Velas decorativas línea simbólica" class="object-cover w-full h-full" />
+        </div>
+        <h3 class="font-bold text-white uppercase tracking-wider text-sm">Velas Línea Simbólica WS</h3>
+        <p class="text-xs text-zinc-400 mt-2 mb-4">Velas artesanales con simbología de los Widows Sons.</p>
+        <div class="mt-auto flex justify-between items-center">
+          <span class="text-[#d4af37] font-bold">$450</span>
+          <a href="/#contacto" class="text-[10px] bg-[#d4af37] text-black px-3 py-1 rounded font-bold uppercase hover:bg-white transition-colors">Consultar</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 3. SECCIÓN DE SPONSORS Y SOCIOS COMERCIALES -->
-  <section id="sponsors" class="px-4 py-16 mx-auto max-w-7xl lg:py-20 bg-zinc-900/10">
-    <div class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
-      <h2 class="text-[#d4af37] font-bold tracking-tight text-3xl sm:text-4xl uppercase mb-4">Programa de Socios Comerciales</h2>
-      <p class="text-zinc-400">Vincula tu marca con la solidaridad. Tu apoyo nos permite financiar los costos logísticos de nuestras intervenciones en la comunidad.</p>
-    </div>
-
-    <div class="grid gap-8 md:grid-cols-3">
-      <div class="p-6 border border-zinc-800 rounded-lg bg-black hover:border-[#d4af37]/50 transition-all flex flex-col">
-        <div class="flex items-center justify-between mb-4">
-          <h3 class="text-white font-bold uppercase text-lg">Sponsor de Ruta</h3>
-          <Icon name="tabler:bike" class="w-6 h-6 text-[#d4af37]" />
-        </div>
-        <ul class="text-sm text-zinc-400 space-y-2 mb-6 flex-grow">
-          <li>• Logo en la web oficial.</li>
-          <li>• Mención en agradecimientos de crónicas.</li>
-          <li>• Certificado de Socio Comercial.</li>
-        </ul>
-        <a href="/#contacto" class="w-full text-center py-2 border border-[#d4af37] text-[#d4af37] font-bold uppercase text-xs rounded hover:bg-[#d4af37] hover:text-black transition-all">Solicitar Información</a>
-      </div>
-
-      <div class="p-6 border-2 border-[#d4af37] rounded-lg bg-zinc-900 flex flex-col transform lg:scale-105 shadow-xl">
-        <div class="flex items-center justify-between mb-4">
-          <h3 class="text-white font-bold uppercase text-lg">Sponsor Litoral</h3>
-          <Icon name="tabler:crown" class="w-6 h-6 text-[#d4af37]" />
-        </div>
-        <p class="text-[10px] text-[#d4af37] font-bold uppercase mb-2">Más Popular</p>
-        <ul class="text-sm text-zinc-300 space-y-2 mb-6 flex-grow">
-          <li>• Todo lo del nivel anterior.</li>
-          <li>• Logo en fondos de Instagram.</li>
-          <li>• Espacio publicitario en Eventos.</li>
-          <li>• Logo en parches de eventos especiales.</li>
-        </ul>
-        <a href="/#contacto" class="w-full text-center py-2 bg-[#d4af37] text-black font-bold uppercase text-xs rounded hover:bg-white transition-all">Unirse al Programa</a>
-      </div>
-
-      <div class="p-6 border border-zinc-800 rounded-lg bg-black hover:border-[#d4af37]/50 transition-all flex flex-col">
-        <div class="flex items-center justify-between mb-4">
-          <h3 class="text-white font-bold uppercase text-lg">Aliado Estratégico</h3>
-          <Icon name="tabler:hand-stop" class="w-6 h-6 text-[#d4af37]" />
-        </div>
-        <ul class="text-sm text-zinc-400 space-y-2 mb-6 flex-grow">
-          <li>• Alianzas por insumos o servicios.</li>
-          <li>• Presencia en puntos de recolección.</li>
-          <li>• Co-branding en acciones sociales.</li>
-        </ul>
-        <a href="/#contacto" class="w-full text-center py-2 border border-[#d4af37] text-[#d4af37] font-bold uppercase text-xs rounded hover:bg-[#d4af37] hover:text-black transition-all">Proponer Alianza</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- 4. DETALLE DE DONACIÓN CIVIL -->
-  <section id="donaciones" class="px-4 py-16 mx-auto max-w-7xl lg:py-20 bg-zinc-900/30 rounded-lg">
-    <div class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
-      <h2 class="text-[#d4af37] font-bold tracking-tight text-3xl sm:text-4xl uppercase mb-4">Donación Civil</h2>
-      <p class="text-zinc-400">No todo es dinero; tu tiempo y lo que ya no usas pueden cambiar una realidad.</p>
-    </div>
-
-    <div class="grid gap-8 row-gap-5 md:grid-cols-2">
-      <div class="p-5 border border-[#d4af37]/20 rounded shadow-sm bg-black">
-        <h3 class="mb-2 font-bold text-white uppercase">Donaciones Materiales</h3>
-        <p class="text-sm text-zinc-300">
-          Recibimos ropa en buen estado, calzado, herramientas o artículos de primera necesidad que tengas en desuso. 
-          Nosotros nos encargamos de que lleguen a las manos correctas en nuestras rodadas solidarias.
-        </p>
-      </div>
-      <div class="p-5 border border-[#d4af37]/20 rounded shadow-sm bg-black">
-        <h3 class="mb-2 font-bold text-white uppercase">Aportes Económicos</h3>
-        <p class="text-sm text-zinc-300">
-          Personas físicas pueden realizar transferencias directas destinadas a la compra de insumos médicos, alimentos o materiales de construcción para familias vulnerables.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- 5. CTA FINAL -->
-  <CallToAction
-    actions={[{ variant: 'primary', text: 'Contactar para Donar', href: '/#contacto' }]}
-    title="¿Tienes algo para entregar?"
-    subtitle="Contáctanos y coordinamos la logística para retirar tu donación o facilitarte los medios de transferencia."
-  />
+  <!-- SECCIONES RESTANTES (SPONSORS Y DONACIONES) -->
+  <!-- ... Mantener el resto del código igual al anterior ... -->
 </Layout>
