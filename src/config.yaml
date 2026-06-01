@@ -9,9 +9,9 @@ site:
 # Metadatos SEO
 metadata:
   title:
-    default: Widows Sons — Capítulo Rio Uruguay
+    default: Widows Sons — Chapter Rio Uruguay
     template: '%s — Widows Sons'
-  description: 'Sitio oficial de los Widows Sons, Capítulo Rio Uruguay. Fraternidad, motociclismo y caridad en el litoral uruguayo.'
+  description: 'Sitio oficial de los Widows Sons, Chapter Rio Uruguay. Fraternidad, motociclismo y caridad en el litoral uruguayo.'
   robots:
     index: true
     follow: true
