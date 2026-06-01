@@ -5,7 +5,7 @@ export const headerData = {
     { text: 'Inicio', href: '/' },
     { text: 'Quiénes Somos', href: getPermalink('/about') },
     { text: 'Eventos', href: getBlogPermalink() },
-    { text: 'Colabora', href: getPermalink('/colabora') }, //  <-- Nueva sección
+    { text: 'Colabora', href: getPermalink('/colabora') },
     { text: 'Contacto', href: '/#contacto' },
     { text: 'Gran Chapter 🏛️', href: 'https://www.wsuruguay.com' },
   ],
@@ -16,23 +16,15 @@ export const headerData = {
 export const footerData = {
   links: [
     {
-      title: 'Capítulo',
+      title: 'Nuestra Orden',
       links: [
+        { text: 'Gran Chapter de Uruguay', href: 'https://www.wsuruguay.com' },
         { text: 'Quiénes Somos', href: getPermalink('/about') },
-        { text: 'Eventos', href: getBlogPermalink() },
-        { text: 'Membresía', href: '/#contacto' },
+        { text: 'Eventos del Litoral', href: getBlogPermalink() },
       ],
     },
     {
-      title: 'Comunidad',
-      links: [
-        { text: 'Instagram', href: 'https://instagram.com/wsriouruguay' },
-        { text: 'Facebook', href: 'https://facebook.com/tu_cuenta' },
-      ],
-    },
-  ],
-     {
-      title: 'Chapter Hermanos',
+      title: 'Chapters Hermanos',
       links: [
         { text: 'Chapter Río Cuareim', href: 'https://www.wsriocuareim.com' },
       ],
@@ -48,6 +40,6 @@ export const footerData = {
     { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: 'https://facebook.com/tu_cuenta' },
   ],
   footNote: `
-    Diseñado por STEB · Widows Sons Rio Uruguay © 2026
+    Diseñado por STEB · Widows Sons Río Uruguay © 2026
   `,
 };
