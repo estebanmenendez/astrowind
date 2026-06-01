@@ -31,6 +31,13 @@ export const footerData = {
       ],
     },
   ],
+     {
+      title: 'Chapter Hermanos',
+      links: [
+        { text: 'Chapter Río Cuareim', href: 'https://www.wsriocuareim.com' },
+      ],
+    },
+  ],
   secondaryLinks: [
     { text: 'Fraternidad', href: '#' },
     { text: 'Servicio', href: '#' },
